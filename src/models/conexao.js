@@ -1,7 +1,6 @@
 import mysql from "mysql2/promise";
 import dotenv from "dotenv";
 
-
 dotenv.config();
 
 const conexao = await mysql.createConnection({
@@ -11,7 +10,6 @@ const conexao = await mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
 });
-
 
 conexao.connect((err) => {
   if (err) {
