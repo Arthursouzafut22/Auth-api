@@ -4,7 +4,7 @@ export default async function privateUser(req, res) {
   const id = req.params.id;
 
   const [rows] = await conexao.execute(
-    "SELECT id, nome, email FROM users WHERE id = ?",
+    "SELECT id, nome, email, email FROM users WHERE id = ?",
     [id]
   );
 
